@@ -32,7 +32,7 @@
                     android:id="@+id/mensagemInicial"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Mais informações:" />
 
                 <Button
                     android:id="@+id/botaoSobre"
@@ -50,7 +50,7 @@
                     android:id="@+id/botaoLoja"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Loja" />
+                    android:text="Web Service" />
 
 
 

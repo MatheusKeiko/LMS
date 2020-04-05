@@ -39,14 +39,14 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
         // botaoSair.setOnClickListener {cliqueSair()}
         botaoContato.setOnClickListener {MostrarTelaBotao("Contato")}
         botaoSobre.setOnClickListener {MostrarTelaBotao("Sobre nós")}
-        botaoLoja.setOnClickListener {MostrarTelaBotao("Loja")}
+        botaoLoja.setOnClickListener {MostrarTelaBotao("Web Service")}
 
         // colocar toolbar
         setSupportActionBar(toolbar)
 
 
         // alterar título da ActionBar
-        supportActionBar?.title = "Disciplinas"
+        supportActionBar?.title = "Menu"
 
         // up navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
