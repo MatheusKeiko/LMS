@@ -2,7 +2,7 @@
     <!-- Tema com Action Bar. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Cor primária da ActionBar -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">#EA8150</item>
         <!-- Cor primária escura da barra do sistema -->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <!-- Cor de destaque -->

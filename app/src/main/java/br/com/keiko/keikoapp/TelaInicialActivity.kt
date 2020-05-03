@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.GravityCompat
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
 import kotlinx.android.synthetic.main.toolbar.*
@@ -18,11 +20,13 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
 
     private val context: Context get() = this
 
+    private var disciplinas = listOf<Disciplina>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_inicial)
 
-        // acessar parametros da intnet
+        // acessar parametros da intent
         // intent é um atributo herdado de Activity
         val args = intent.extras
         // recuperar o parâmetro do tipo String
@@ -34,25 +38,42 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
         Toast.makeText(context, "Parâmetro: $nome", Toast.LENGTH_LONG).show()
         Toast.makeText(context, "Numero: $numero", Toast.LENGTH_LONG).show()
 
-        mensagemInicial.text = "Bem vindo $nome"
+        //mensagemInicial.text = "Bem vindo $nome"
 
         // botaoSair.setOnClickListener {cliqueSair()}
-        botaoContato.setOnClickListener {MostrarTelaBotao("Contato")}
-        botaoSobre.setOnClickListener {MostrarTelaBotao("Sobre nós")}
-        botaoLoja.setOnClickListener {MostrarTelaBotao("Web Service")}
+        //botaoContato.setOnClickListener {MostrarTelaBotao("Contato")}
+        //botaoSobre.setOnClickListener {MostrarTelaBotao("Sobre nós")}
+        //botaoLoja.setOnClickListener {MostrarTelaBotao("Web Service")}
 
         // colocar toolbar
         setSupportActionBar(toolbar)
 
 
         // alterar título da ActionBar
-        supportActionBar?.title = "Menu"
+        supportActionBar?.title = "Disciplinas"
 
         // up navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // configuração do menu lateral
         configuraMenuLateral()
+
+        recyclerDisciplinas?.layoutManager = LinearLayoutManager(context)
+        recyclerDisciplinas?.itemAnimator = DefaultItemAnimator()
+        recyclerDisciplinas?.setHasFixedSize(true)
+    }
+
+    override fun onResume(){
+        super.onResume()
+        taskDisciplinas()
+    }
+
+    fun taskDisciplinas(){
+        disciplinas = DisciplinaService.getDisciplinas(context)
+        recyclerDisciplinas?.adapter = DisciplinaAdapter(disciplinas){ onClickDisciplina(it)}
+    }
+    fun onClickDisciplina(disciplina:Disciplina){
+        Toast.makeText(context, "Clicou em ${disciplina.nome}", Toast.LENGTH_LONG).show()
     }
 
     fun MostrarTelaBotao(nomeBotao: String) {

@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="160dp"
-    android:background="@drawable/fundo_menu"
+    android:background="@drawable/todxs"
     android:layout_gravity="bottom"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:padding="16dp">
@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nome Usuário"
+        android:text="Olá, Aluno!"
         android:paddingTop="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 

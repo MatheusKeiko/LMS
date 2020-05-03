@@ -21,40 +21,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDisciplinas"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical">
+            </androidx.recyclerview.widget.RecyclerView>
 
-                android:padding="16dp">
-
-                <TextView
-                    android:id="@+id/mensagemInicial"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Mais informações:" />
-
-                <Button
-                    android:id="@+id/botaoSobre"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sobre nós" />
-
-                <Button
-                    android:id="@+id/botaoContato"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Contato" />
-
-                <Button
-                    android:id="@+id/botaoLoja"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Web Service" />
-
-
-
-            </LinearLayout>
         </ScrollView>
     </LinearLayout>
 
@@ -67,12 +47,9 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/menu_lateral_cabecalho"
-        app:menu="@menu/menu_lateral"
-
-        >
+        app:menu="@menu/menu_lateral">
 
 
     </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
-

@@ -8,7 +8,8 @@
         android:id="@+id/texto_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/mensagem_login" />
+        android:text="@string/mensagem_login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:id="@+id/texto_usuario"
@@ -40,8 +41,9 @@
         android:id="@+id/botao_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:stateListAnimator="@null"/>
+        android:background="#EA8150"
+        android:stateListAnimator="@null"
+        android:text="Login" />
 
     <TextView
         android:id="@+id/mensagemtela"
