@@ -33,6 +33,7 @@ class DisciplinaAdapter (
         val view = LayoutInflater.from(parent.context).inflate(R.layout.adapter_disciplina, parent, false)
 
         val holder = DisciplinasViewholder(view)
+
         return holder
     }
 

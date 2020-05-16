@@ -36,22 +36,40 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/botao_login"
-        android:layout_width="match_parent"
+    <CheckBox
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#EA8150"
-        android:stateListAnimator="@null"
-        android:text="Login" />
+        android:id="@+id/checkLembrar"
+        android:text="Lembrar login"/>
 
-    <TextView
-        android:id="@+id/mensagemtela"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textAlignment="center"
-        android:textColor="@color/colorError" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/botao_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EA8150"
+            android:stateListAnimator="@null"
+            android:text="Login" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/mensagemtela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorError" />
+
+    </FrameLayout>
 
     <ImageView
         android:id="@+id/campo_imagem"
@@ -59,8 +77,5 @@
         android:layout_height="0dp"
         android:layout_weight="2"
         android:src="@drawable/imagem_login"/>
-
-
-
 </LinearLayout>
 

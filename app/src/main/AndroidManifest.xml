@@ -3,15 +3,18 @@
     package="br.com.keiko.keikoapp">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
+        android:name = ".LMSApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Todxs as Cores"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,10 +23,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".DebugActivity" />
-        <activity android:name=".TelaInicialActivity"
+        <activity
+            android:name=".TelaInicialActivity"
             android:theme="@style/AppTheme.Toolbar"></activity>
-        <activity android:name=".BotoesActivity"
+        <activity
+            android:name=".BotoesActivity"
             android:theme="@style/AppTheme.Toolbar"></activity>
+        <activity
+            android:name=".DisciplinaActivity"
+            android:parentActivityName=".TelaInicialActivity"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity android:name=".DisciplinaCadastroActivity"></activity>
     </application>
 
 </manifest>

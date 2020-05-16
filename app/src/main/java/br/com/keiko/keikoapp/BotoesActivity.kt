@@ -15,20 +15,9 @@ class BotoesActivity : DebugActivity() {
 
         val args = intent.extras
         val nomeTela = args?.getString("NomeTela")
-
-
-        // colocar toolbar
         setSupportActionBar(toolbar)
-
-
-        // alterar título da ActionBar
         supportActionBar?.title = nomeTela
-
-
-
     }
-
-
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == 1) {
@@ -36,7 +25,4 @@ class BotoesActivity : DebugActivity() {
             Toast.makeText(context, "$result", Toast.LENGTH_LONG).show()
         }
     }
-
-
-
 }
