@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Tdx</string>
+    <string name="mensagem_login">Faça seu Login</string>
+
+    <string name="action_buscar">Buscar</string>
+    <string name="action_atualizar">Atualizar</string>
+    <string name="action_adicionar">Adicionar</string>
+    <string name="action_config">Configurações</string>
+    <string name="action_remover">Remover</string>
+
+
+    <string name="navigation_drawer_open">Abrir</string>
+    <string name="navigation_drawer_close">Fechar</string>
+
+    <!-- Ref para nome de usuário -->
+    <string name="nome_usuario">Bem vindo, Aluno</string>
+
+    <!-- KEY para Maps API -->
+    <string name="API_KEY">AIzaSyC8jOzVz2FF_16BPqWGdWbz1frbYyY1H5M</string>
+    <string name="hello_little_world">Hello Little World!</string>
+
+</resources>

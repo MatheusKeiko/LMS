@@ -1,0 +1,2 @@
+rootProject.name='Tdx'
+include ':app'
